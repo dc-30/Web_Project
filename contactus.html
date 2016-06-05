@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Us</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<style>
+  		h1{
+  			text-align: center;
+  			color: white;
+  			background-color: #266C87;
+  			margin: 0;
+  			padding: 20px;
+        font-family: 'Windsong';
+  		}
+  		html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    body{
+      background-color: #ddd;
+    }
+    #left, #right { 
+        width: 49%; 
+        margin:2px; 
+        padding-left: 0px;
+        
+        /*border: 1px solid black;*/
+        height: 50%;
+      } 
+       #map {
+        width: 500px;
+        height: 400px;
+      }
+      
+
+      #left  { float:left;  }
+      #right { float:right; } 
+      #container { 
+      overflow:auto; 
+      width: 100%;
+    } 
+    h3{
+      color: black;
+      background-color: #ddd;
+      display: block;
+      margin: 0;
+      padding: 10px;
+      height: 100%;
+      margin-top: 0;
+      
+    }
+    </style>
+  </head>
+  <body>
+    <h1>CONTACT US</h1>
+    <div id="container">
+      <div id="left">
+          <h3>Contact Pure Air</h3>
+          <p style="padding-left:10px;color:#302727;">
+          Plot no - 7, Industrial Developement Area,<br>
+          Phase -1, Cherlapally,<br>
+          Hyderabad - 500 051,<br>
+          Telangana, India.<br>
+          <br>
+          Phone: 91-040-64623568, 64623569<br>
+          Mobile: 09505306899 ,<br>
+          Email: info@pureair.in, sales@pureair.in<br>
+          <br>
+          After Sales Division<br>
+
+          Phone: 91-040-64623567<br>
+          Email: csd@pureair.in<br>
+          <br>
+        </p>
+      </div>
+      <div id="right" float="right">
+        <h3>Location</h3>
+        <div id="map"></div>
+          <script>
+            function initMap() {
+              var mapDiv = document.getElementById('map');
+              var map = new google.maps.Map(mapDiv, {
+                center: {lat: 44.540, lng: -78.546},
+                zoom: 8
+              });
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+              async defer></script>
+      </div>
+    </div>
+  </body>
+</html>
